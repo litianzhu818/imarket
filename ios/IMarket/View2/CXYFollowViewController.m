@@ -63,7 +63,7 @@
             cell = [[CXYMarketListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         }
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.marketImage.image =[UIImage imageNamed:@"1.png"];
+        cell.marketImage.image =[UIImage imageNamed:[NSString stringWithFormat:@"%03d.jpg",indexPath.row]];
         cell.marketName.text = @"XX超市";
         cell.marketAddress.text = @"高新区天府软件园10号";
         cell.marketType.text = @"";
@@ -76,6 +76,7 @@
     CXYFollowTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier1];
     if (!cell) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"CXYFollowTableViewCell" owner:self options:nil]lastObject];
+        cell.goodsImageV.image = [UIImage imageNamed:[NSString stringWithFormat:@"%03d.jpg",indexPath.row]];
     }
     return cell;
 }
