@@ -33,6 +33,7 @@
 		04217E3719B8640C00E2A2F7 /* CXYMarketListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04217E3619B8640C00E2A2F7 /* CXYMarketListCell.m */; };
 		04217E5819B8643A00E2A2F7 /* CircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04217E4A19B8643A00E2A2F7 /* CircleLayout.m */; };
 		04217E5A19B8643A00E2A2F7 /* CXYMarketTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04217E4E19B8643A00E2A2F7 /* CXYMarketTopViewController.m */; };
+		042F994E19C1974200FCA518 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042F994D19C1974200FCA518 /* SDWebImage.framework */; };
 		0431F0FE19BD50130055F65C /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0431F0EE19BD50130055F65C /* 001.jpg */; };
 		0431F0FF19BD50130055F65C /* 002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0431F0EF19BD50130055F65C /* 002.jpg */; };
 		0431F10019BD50130055F65C /* 003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0431F0F019BD50130055F65C /* 003.jpg */; };
@@ -55,7 +56,6 @@
 		0447B33319C0310A006D0831 /* CXYSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0447B33119C0310A006D0831 /* CXYSearchViewController.xib */; };
 		0447B33719C03B53006D0831 /* CXYCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0447B33519C03B53006D0831 /* CXYCategoryViewController.m */; };
 		0447B33819C03B53006D0831 /* CXYCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0447B33619C03B53006D0831 /* CXYCategoryViewController.xib */; };
-		0447B33919C04AB4006D0831 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FAE17F19B0096A00110CC5 /* SDWebImage.framework */; };
 		044BBD9C19AEBD85003D1FCA /* CXYSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044BBD9B19AEBD85003D1FCA /* CXYSplashViewController.m */; };
 		044BBD9E19AEBE20003D1FCA /* CXYSplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044BBD9D19AEBE20003D1FCA /* CXYSplashViewController.xib */; };
 		044BBDA319AEC24B003D1FCA /* CXYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 044BBDA119AEC24B003D1FCA /* CXYTabBar.m */; };
@@ -216,6 +216,7 @@
 		04217E4A19B8643A00E2A2F7 /* CircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayout.m; sourceTree = "<group>"; };
 		04217E4D19B8643A00E2A2F7 /* CXYMarketTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXYMarketTopViewController.h; sourceTree = "<group>"; };
 		04217E4E19B8643A00E2A2F7 /* CXYMarketTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXYMarketTopViewController.m; sourceTree = "<group>"; };
+		042F994D19C1974200FCA518 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		0431F0EE19BD50130055F65C /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 001.jpg; sourceTree = "<group>"; };
 		0431F0EF19BD50130055F65C /* 002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 002.jpg; sourceTree = "<group>"; };
 		0431F0F019BD50130055F65C /* 003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 003.jpg; sourceTree = "<group>"; };
@@ -356,7 +357,6 @@
 		04F1783719ADDD3400DD8229 /* CXYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXYLoginViewController.m; sourceTree = "<group>"; };
 		04F1783819ADDD3400DD8229 /* CXYLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CXYLoginViewController.xib; sourceTree = "<group>"; };
 		04F1783B19ADE52B00DD8229 /* CXYDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXYDefines.h; sourceTree = "<group>"; };
-		04FAE17F19B0096A00110CC5 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		04FAE18119B00B1A00110CC5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		04FAE18319B02D8300110CC5 /* CXYFollowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXYFollowTableViewCell.h; sourceTree = "<group>"; };
 		04FAE18419B02D8300110CC5 /* CXYFollowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXYFollowTableViewCell.m; sourceTree = "<group>"; };
@@ -406,7 +406,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0447B33919C04AB4006D0831 /* SDWebImage.framework in Frameworks */,
+				042F994E19C1974200FCA518 /* SDWebImage.framework in Frameworks */,
 				04217E3019B8632900E2A2F7 /* CoreLocation.framework in Frameworks */,
 				04FAE18219B00B1A00110CC5 /* CFNetwork.framework in Frameworks */,
 				044BBDEE19AEDB43003D1FCA /* MapKit.framework in Frameworks */,
@@ -769,9 +769,9 @@
 		04F1780019ADDD0200DD8229 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				042F994D19C1974200FCA518 /* SDWebImage.framework */,
 				04217E2F19B8632900E2A2F7 /* CoreLocation.framework */,
 				04FAE18119B00B1A00110CC5 /* CFNetwork.framework */,
-				04FAE17F19B0096A00110CC5 /* SDWebImage.framework */,
 				044BBDED19AEDB43003D1FCA /* MapKit.framework */,
 				044BBDEB19AEDB33003D1FCA /* ImageIO.framework */,
 				044BBDE919AEDB00003D1FCA /* QuartzCore.framework */,
