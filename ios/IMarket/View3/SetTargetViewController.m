@@ -112,11 +112,13 @@
         
         _leftImageView = [[UIImageView alloc] initWithFrame:Cell_LeftImageViewFrame];
         _leftImageView.tag = Cell_LeftImageView_Tag;
-        _leftImageView.image = [UIImage imageNamed:@"1.png"];
+        //_leftImageView.image = [UIImage imageNamed:@"002.jpg"];
+        _leftImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%03d.jpg",indexPath.row]];
         _leftImageView.userInteractionEnabled = YES;
         
         _rightImageView = [[UIImageView alloc] initWithFrame:Cell_RightImageViewFrame];
-        _rightImageView.image = [UIImage imageNamed:@"1.png"];
+        _rightImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%03d.jpg",(indexPath.row+1)]];
+
         _rightImageView.tag = Cell_RightImageView_Tag;
         _rightImageView.userInteractionEnabled = YES;
 

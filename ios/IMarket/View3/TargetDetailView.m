@@ -152,7 +152,8 @@
         UIImageView *_imageView = [[UIImageView alloc] init];
         _imageView.frame = CGRectMake(i * scrollView.frame.size.width, 0, scrollView.frame.size.width, scrollView.frame.size.height);
 //        [_imageView setImageWithURL:[NSURL URLWithString:[[[dictionary objectForKey:@"url"] objectAtIndex:i] objectForKey:@"url"]]];
-        _imageView.image = [UIImage imageNamed:@"1.png"];
+        //_imageView.image = [UIImage imageNamed:@"1.png"];
+        _imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%03d.jpg",i]];
         _imageView.contentMode = UIViewContentModeScaleToFill;
         _imageView.tag = i + 1;
         [scrollView addSubview:_imageView];
