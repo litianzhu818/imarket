@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CXYFollowTableViewCell : UITableViewCell
-
+@property (nonatomic,strong) UIImageView * picture;
 @end

@@ -138,6 +138,7 @@
     }
 }
 
+
 - (void)onSelectType:(UIButton*)sender
 {
     CXYCategoryViewController *categoryVC = [[CXYCategoryViewController alloc]init];

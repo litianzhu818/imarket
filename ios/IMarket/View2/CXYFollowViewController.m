@@ -12,7 +12,9 @@
 @interface CXYFollowViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     IBOutlet UITableView *table;
+    NSMutableArray * jpgArr;
 }
+
 @end
 
 @implementation CXYFollowViewController
@@ -32,6 +34,10 @@
     [self setNavigationBarTitle:@"我的关注"];
     [self setNavigationBarRightButtonImage:@"1.png"];
     [self.nowplayingButton addTarget:self action:@selector(onSelectType:) forControlEvents:UIControlEventTouchUpInside];
+    jpgArr = [NSMutableArray array];
+    for (int i = 0; i < 10; i++) {
+        [jpgArr addObject:[NSString stringWithFormat:@"00%d.jpg",i]];
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -63,7 +69,7 @@
             cell = [[CXYMarketListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         }
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.marketImage.image =[UIImage imageNamed:@"1.png"];
+        cell.marketImage.image =[UIImage imageNamed:[jpgArr objectAtIndex:indexPath.row]];
         cell.marketName.text = @"XX超市";
         cell.marketAddress.text = @"高新区天府软件园10号";
         cell.marketType.text = @"";
@@ -76,6 +82,9 @@
     CXYFollowTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier1];
     if (!cell) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"CXYFollowTableViewCell" owner:self options:nil]lastObject];
+//        cell.imageView.frame = [CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)];
+//        [cell.imageView setImage:[UIImage imageNamed:[jpgArr objectAtIndex:indexPath.row]]];
+//        
     }
     return cell;
 }
