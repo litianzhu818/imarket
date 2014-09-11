@@ -78,6 +78,7 @@
     NSArray *conList;
     
     CGFloat tarbarHeight;
+    CXYSearchViewController *searchVC;
 }
 @end
 
@@ -120,13 +121,28 @@
     }
     self.view.frame = CGRectMake(0, 0, kScreen_Width, kScreen_Height-tarbarHeight- StaNavHeight);
     self.view.backgroundColor = IABackground;
-    [self.nowplayingButton addTarget:self action:@selector(onSearch:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self setNavigationBarRightButtonImage:@"search.png"];
+    [self.nowplayingButton addTarget:self action:@selector(onSelectType:) forControlEvents:UIControlEventTouchUpInside];
+    //button长按事件
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onSearchMarket:)];
+    longPress.minimumPressDuration = 0.5; //定义按的时间
+    [self.nowplayingButton addGestureRecognizer:longPress];
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)onSearch:(UIButton*)sender
+-(void)onSearchMarket:(UILongPressGestureRecognizer*)gestureRecognizer{
+    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
+        searchVC = [[CXYSearchViewController alloc]initWithNibName:@"CXYSearchViewController" bundle:nil];
+        [[UIApplication sharedApplication].keyWindow addSubview:searchVC.view];
+    }
+}
+
+- (void)onSelectType:(UIButton*)sender
 {
-  
+    CXYCategoryViewController *categoryVC = [[CXYCategoryViewController alloc]init];
+    categoryVC.categoryType = GOODSTYPE;
+    [self.navigationController pushViewController:categoryVC animated:YES];
 }
 
 -(void) addView

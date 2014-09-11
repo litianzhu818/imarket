@@ -13,6 +13,7 @@
 {
     NSMutableArray *marketImages;
     NSArray *latArray;
+    CXYSearchViewController *searchVC;
 }
 @end
 
@@ -78,17 +79,16 @@
 
 -(void)onSearchMarket:(UILongPressGestureRecognizer*)gestureRecognizer{
     if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
-
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:nil message:@"长按---搜索" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-        [alert show];
+        searchVC = [[CXYSearchViewController alloc]initWithNibName:@"CXYSearchViewController" bundle:nil];
+        [[UIApplication sharedApplication].keyWindow addSubview:searchVC.view];
     }
 }
 
-
 - (void)onSelectType:(UIButton*)sender
 {
-    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:nil message:@"单击---选择类型" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-    [alert show];
+    CXYCategoryViewController *categoryVC = [[CXYCategoryViewController alloc]init];
+    categoryVC.categoryType = MARKETTYPE;
+    [self.navigationController pushViewController:categoryVC animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
