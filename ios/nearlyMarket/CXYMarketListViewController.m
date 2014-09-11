@@ -26,16 +26,16 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        latArray = @[
-            @{@"name":@"xx超市",@"image_url":@"000.jpg",@"lat":@"30.553816",@"lng":@"104.066670"},
-            @{@"name":@"xx超市",@"image_url":@"001.jpg",@"lat":@"30.543338",@"lng":@"104.067913"},
-            @{@"name":@"xx超市",@"image_url":@"002.jpg",@"lat":@"30.573338",@"lng":@"104.068913"},
-            @{@"name":@"xx超市",@"image_url":@"003.jpg",@"lat":@"30.567338",@"lng":@"104.067913"},
-            @{@"name":@"xx超市",@"image_url":@"004.jpg",@"lat":@"30.563338",@"lng":@"104.064913"},
-            @{@"name":@"xx超市",@"image_url":@"005.jpg",@"lat":@"30.581338",@"lng":@"104.064913"},
-            @{@"name":@"xx超市",@"image_url":@"006.jpg",@"lat":@"30.578338",@"lng":@"104.068913"},
-            @{@"name":@"xx超市",@"image_url":@"007.jpg",@"lat":@"30.568338",@"lng":@"104.065913"},
-            ];
+//        latArray = @[
+//            @{@"name":@"xx超市",@"image_url":@"000.jpg",@"lat":@"30.553816",@"lng":@"104.066670"},
+//            @{@"name":@"xx超市",@"image_url":@"001.jpg",@"lat":@"30.543338",@"lng":@"104.067913"},
+//            @{@"name":@"xx超市",@"image_url":@"002.jpg",@"lat":@"30.573338",@"lng":@"104.068913"},
+//            @{@"name":@"xx超市",@"image_url":@"003.jpg",@"lat":@"30.567338",@"lng":@"104.067913"},
+//            @{@"name":@"xx超市",@"image_url":@"004.jpg",@"lat":@"30.563338",@"lng":@"104.064913"},
+//            @{@"name":@"xx超市",@"image_url":@"005.jpg",@"lat":@"30.581338",@"lng":@"104.064913"},
+//            @{@"name":@"xx超市",@"image_url":@"006.jpg",@"lat":@"30.578338",@"lng":@"104.068913"},
+//            @{@"name":@"xx超市",@"image_url":@"007.jpg",@"lat":@"30.568338",@"lng":@"104.065913"},
+//            ];
     }
     return self;
 }
@@ -48,10 +48,10 @@
     
     marketImages = [NSMutableArray array];
     for (int i=0;i<10; i++) {
-        [marketImages addObject:@"1.png"];
+        [marketImages addObject:[NSString stringWithFormat:@"00%d.jpg",i]];
     }
-    for (int i=0;i<10; i++) {
-        [marketImages addObject:@"1.png"];
+    for (int i=0;i<6; i++) {
+        [marketImages addObject:[NSString stringWithFormat:@"00%d.jpg",i]];
     }
     
     table = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, kScreen_Width, kScreen_Height-StaNavHeight*2-TabbarHeight)];
